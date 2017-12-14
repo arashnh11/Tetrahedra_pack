@@ -19,7 +19,7 @@
 
 
   tr_tri_intersect3D - C1 is a vertex of triangle A. P1,P2 are the two edges originating from this vertex.
-	D1 is a vertex of triangle B. P1,P2 are the two edges originating from this vertex.
+	D1 is a vertex of triangle B. Q1,Q2 are the two edges originating from this vertex.
 	Returns zero for disjoint triangles and non-zero for intersection.
 
   coplanar_tri_tri - This procedure for testing coplanar triangles for intersection is 
