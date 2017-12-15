@@ -1,4 +1,3 @@
-//#include "../Geometry/geometry.h"
 #include "../Geometry/tet_col.h"
 #include "../Packing/tet_pack.h"
 #include "../Script/tet_script.h"
@@ -6,7 +5,7 @@
 int main()
 {
 	// Inputs for regular tetrahedra packing
-	int N_tet = 25; // Number of Tetrahedra in the pack
+	int N_tet = 20; // Number of Tetrahedra in the pack
 	double len = 1; // size of the triangle edges
 	
 	// Run the packing scheme
