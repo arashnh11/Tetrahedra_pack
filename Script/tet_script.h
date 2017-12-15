@@ -2,6 +2,21 @@
 #include <math.h>
 using namespace std;
 
+int write_basis(){
+	vector<vector<double> > Base(3, vector<double>(3,0));
+	for (int i = 0; i <= Base.size() - 1; i++){
+		Base[i][i] = 1;
+	}
+	for (int j = 0; j <= Base.size() - 1; j++){
+		for (int i = 0; i <= Base[1].size() - 1; i++){
+			printf("%8.4f ", Base[j][i]);
+		}
+		printf("\n");
+	}
+	printf("\n");
+	return 0;
+}
+
 int write_tet(vector<vector<double> > &Tet){
 	for (int j = 0; j <= Tet.size() - 1; j++){
 		for (int i = 0; i <= Tet[1].size() - 1; i++){

@@ -36,7 +36,7 @@ int main()
 	while (tet_add <= N_tet - 1){
 		for (int k = 0; k <= Pack.size() - 1; k++){
 			Face = tet_face(Pack[k]);
-			for (int j = 2; j <= Face.size() - 1; j++){
+			for (int j = 0; j <= Face.size() - 1; j++){
 				Tri = Face[j];
 				N = find_vertex(Tri); // find the possible 4th vertex for regular tetrahedra
 				for (int i = 0; i <= N.size() - 1; i++){
@@ -63,8 +63,9 @@ int main()
 			} // j loop
 		} // k loop
 	} // while loop
-
-write_pack(Pack);
+	
+	write_basis();
+	write_pack(Pack);
 // sanity
 
 /*
