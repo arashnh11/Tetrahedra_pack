@@ -15,9 +15,22 @@ The scheme used for optimization is a bipyramid propagation algorithm.
 8) If checks passed, add tetrahedron to the pack
 9) Continue searching for new candidates as described in 4-6
 
-Note:
-Further optmization can be achieved by evaluating the packing density for
-	different face selections 
-	different propgation directions
+Notes for furture improvements:
+-- Further optmization can be achieved by evaluating the 
+	packing density for different face selections different 
+	propgation directions and keep those tetrahedra which provides higher density.
 
-and keep those tetrahedra which provides higher density
+-- Another dimension to the shceme complexity can be addded
+    by rotating/translation of the base bipyramid
+
+Notes for execution on a Linux machine:
+
+1) Download the package from github at:
+git@github.com:arashnh11/Tetrahedra_pack.git
+
+2) Extract the files and then open a terminal:
+cd Tetrahedra_pack
+cd Build
+make
+
+
