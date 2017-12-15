@@ -1,3 +1,4 @@
+#include "geometry.h"
 #include "tri_col.h"
 #include <vector>
 #include <math.h>
@@ -5,8 +6,12 @@ using namespace std;
 
 bool is_tri_col(vector<vector<double> > &P, vector<vector<double> >&Q)
 {
+	vector<double> P_u(3); 
+	vector<double> Q_u(3);
+	P_u = unit_norm(P[0], P[1], P[2]);
+	Q_u = unit_norm(Q[0], Q[1], Q[2]);
 	// Case: if P and Q are identical --> skip the code
-	if (P == Q){
+	if (P == Q || P_u == Q_u){
 		return false;
 	}
 

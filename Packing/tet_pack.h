@@ -32,7 +32,10 @@ bool check_pack_col(vector<vector<vector<double> > > &Pack){
 		for (int j = 0; j <= Pack.size() - 1; j++){
 			if (is_tet_col(Pack[i], Pack[j]) && i!=j){
 				flag = true;
-				printf("ERROR: Some of the tetrahedra are colliding!!\n");
+				printf("***ERROR: Some of the tetrahedra are colliding!!\n");
+				printf("          Adjust pack config by relaxing packing configuration:\n");
+				printf("          Reduce number of tetrahedra in the pack (N_tet) and/or:\n");
+				printf("          Reduce size of tetrahedron in the pack (len) \n");
 				exit(1);
 			}
 		}
@@ -66,7 +69,7 @@ bool check_pack_size(vector<vector<vector<double> > > &Pack, double len){
 	return flag;
 }
 
-// Packing scheme based on bipyramid progagation
+// Packing scheme based on tight bipyramid progagation
 vector<vector<vector<double> > > packing(double len, int N_tet){
 	vector<vector<double> > Tri(3, vector<double>(3));
 	vector<vector<double> > Tet(4, vector<double>(3));

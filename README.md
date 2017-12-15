@@ -3,7 +3,7 @@ This software generates a dense packing of regular tetrahedra
   Dec 15, 2017
   Email: a.nematihayati@gmail.com
   
-The scheme used for optimization is a bipyramid propagation algorithm.
+The scheme used for optimization is a tight bipyramid propagation algorithm.
 
 1) Sketch the base triangle for a regular tetrahedron. 
 2) Find possible vertex which make regular tetrahedra
@@ -22,6 +22,16 @@ Notes for furture improvements:
 
 -- Another dimension to the shceme complexity can be addded
     by rotating/translation of the base bipyramid
+
+-- In this version, there is a limitation in the packing
+	configuration. To get optimum packing, not all combinations
+	of N_tet (number of tetrahedra in the pack) and len (length of tetrahedra)
+	are possible. The threshold packing sizes at different length for this version are:
+	 N_tet = 25, len = 1 
+	 N_tet = 70, len = 0.01
+	
+	For other packing configuations, sizes should be relaxed by reducing N_tet and/or len.
+	(This is suggested in the software if the input case cannot be efficiency optimized.)
 
 Notes for execution on a Linux machine:
 
