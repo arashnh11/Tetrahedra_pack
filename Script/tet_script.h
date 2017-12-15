@@ -18,10 +18,10 @@ int write_pack(vector<vector<vector<double> > > &Pack){
 	for (int k = 0; k <= Pack.size() - 1; k++){
 		for (int j = 0; j <= Pack[1].size() - 1; j++){
 			for (int i = 0; i <= Pack[1][1].size() - 1; i++){
-				printf("%f ", Pack[k][j][i]);
+				printf("%8.4f ", Pack[k][j][i]);
 			}
-			if (j < Pack[1].size() - 1)
-			printf(", ");
+//			if (j < Pack[1].size() - 1)
+//			printf(", ");
 		}
 	printf("\n");
 	}
