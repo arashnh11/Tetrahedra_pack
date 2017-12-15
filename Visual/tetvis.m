@@ -14,14 +14,16 @@ for i = 1: length(data)
     y = data(i, 2:3:s(2));
     z = data(i, 3:3:s(2));
     plot3(x,y,z,'*-','MarkerSize',5)
+%    scatter3(x,y,z) %,'*-','MarkerSize',5)
+
     hold on
 end
 %mesh(X*0.5, Y*0.5, Z*0.5)
 
 
 
-axis equal
-axis([-1  2    -1  2    -1  2])
+axis image
+%axis([-1  2    -1  2    -1  2])
 
 xlabel('x');
 ylabel('y');

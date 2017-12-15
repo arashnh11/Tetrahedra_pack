@@ -31,7 +31,7 @@ int write_tet(vector<vector<double> > &Tet){
 
 int write_pack(vector<vector<vector<double> > > &Pack){
 	
-    FILE *f = fopen("Output.txt","a");
+    FILE *f = fopen("Output.txt","w");
 	for (int k = 0; k <= Pack.size() - 1; k++){
 		for (int j = 0; j <= Pack[1].size() - 1; j++){
 			for (int i = 0; i <= Pack[1][1].size() - 1; i++){
