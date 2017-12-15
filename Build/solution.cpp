@@ -1,5 +1,7 @@
-#include "tetpack.h"
-#include <math.h>
+#include "../Geometry/geometry.h"
+#include "../Geometry/tet_col.h"
+#include "../Packing/tet_pack.h"
+#include "../Script/tet_script.h"
 
 int main()
 {
@@ -13,7 +15,7 @@ int main()
 	vector<vector<double> > Tet(4, vector<double>(3));
 	vector<vector<double> > Tet0(4, vector<double>(3));
 	vector<vector<double> > Tet1(4, vector<double>(3));
-	int N_tet = 50;
+	int N_tet = 10;
 	vector<vector<vector<double> > > Pack(N_tet, vector<vector<double> > (4, vector<double>(3)));
 	vector<vector<vector<double> > >Face(4, vector<vector<double> > (3, vector<double>(3)));
 
@@ -34,7 +36,7 @@ int main()
 	while (tet_add <= N_tet - 1){
 		for (int k = 0; k <= Pack.size() - 1; k++){
 			Face = tet_face(Pack[k]);
-			for (int j = 0; j <= Face.size() - 1; j++){
+			for (int j = 2; j <= Face.size() - 1; j++){
 				Tri = Face[j];
 				N = find_vertex(Tri); // find the possible 4th vertex for regular tetrahedra
 				for (int i = 0; i <= N.size() - 1; i++){
