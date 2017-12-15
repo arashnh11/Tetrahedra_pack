@@ -6,8 +6,8 @@
 int main()
 {
 	// Inputs for regular tetrahedra packing
-	int N_tet = 70; // Number of Tetrahedra in the pack
-	double len = 0.01; // size of the triangle edges
+	int N_tet = 25; // Number of Tetrahedra in the pack
+	double len = 1; // size of the triangle edges
 	
 	// Run the packing scheme
 	vector<vector<vector<double> > > Pack(N_tet, 
