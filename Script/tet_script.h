@@ -30,17 +30,23 @@ int write_tet(vector<vector<double> > &Tet){
 }
 
 int write_pack(vector<vector<vector<double> > > &Pack){
+	
+    FILE *f = fopen("Output.txt","a");
 	for (int k = 0; k <= Pack.size() - 1; k++){
 		for (int j = 0; j <= Pack[1].size() - 1; j++){
 			for (int i = 0; i <= Pack[1][1].size() - 1; i++){
 				printf("%8.4f ", Pack[k][j][i]);
+				fprintf(f, "%8.4f ", Pack[k][j][i]);
 			}
 //			if (j < Pack[1].size() - 1)
 //			printf(", ");
 		}
 	printf("\n");
+	fprintf(f, "\n");
 	}
 	printf("\n");
+	fprintf(f, "\n");
+	fclose(f);
 	return 0;
 }
 

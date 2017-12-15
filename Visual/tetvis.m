@@ -5,7 +5,7 @@ close all
 %X = [1 0 1; 0 0 0; 0 0 0];
 %Y = [0 0 0; 1 0 1; 0 0 0];
 %Z = [0 1 0; 0 0 0; 1 0 1];
-data = load('data.txt');
+data = load('Output.txt');
 s = size(data);
 col = s(2);
 figure(1);
